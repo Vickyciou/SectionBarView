@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LTSectionBarView" customModule="SectionBarView" customModuleProvider="target">
+            <connections>
+                <outlet property="mRedLineView" destination="z2o-YZ-c6B" id="ht8-7z-C9g"/>
+                <outlet property="mScrollView" destination="KbH-yS-hOu" id="yqd-OY-J5j"/>
+                <outlet property="mStackView" destination="Enr-WF-fao" id="LzU-ag-HOI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="0lN-sK-gSg">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="43"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbH-yS-hOu">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="43"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Enr-WF-fao">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="43"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cME-t5-mSW" userLabel="Setion0">
+                                    <rect key="frame" x="0.0" y="0.0" width="117.66666666666667" height="43"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Setion0">
+                                        <color key="titleColor" name="black22"/>
+                                    </state>
+                                    <state key="selected" title="Setion1">
+                                        <color key="titleColor" name="strawberry"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="645-ho-ZUZ" userLabel="Setion1">
+                                    <rect key="frame" x="137.66666666666666" y="0.0" width="117.66666666666666" height="43"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Setion1">
+                                        <color key="titleColor" name="black22"/>
+                                    </state>
+                                    <state key="selected" title="Setion2">
+                                        <color key="titleColor" name="strawberry"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpR-SD-pot" userLabel="Setion2">
+                                    <rect key="frame" x="275.33333333333331" y="0.0" width="117.66666666666669" height="43"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Setion2">
+                                        <color key="titleColor" name="black22"/>
+                                    </state>
+                                    <state key="selected" title="Setion3">
+                                        <color key="titleColor" name="strawberry"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <viewLayoutGuide key="safeArea" id="dqC-VM-zkH"/>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z2o-YZ-c6B" userLabel="RedLineView">
+                            <rect key="frame" x="29" y="40" width="60" height="3"/>
+                            <color key="backgroundColor" name="strawberry"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="3" id="N0Q-8W-eL7"/>
+                                <constraint firstAttribute="width" constant="60" id="iPK-Fd-t0a"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="2.5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Enr-WF-fao" secondAttribute="bottom" id="56A-ya-DdW"/>
+                        <constraint firstItem="Enr-WF-fao" firstAttribute="leading" secondItem="KbH-yS-hOu" secondAttribute="leading" id="5av-FV-kPt"/>
+                        <constraint firstItem="z2o-YZ-c6B" firstAttribute="centerX" secondItem="cME-t5-mSW" secondAttribute="centerX" placeholder="YES" id="9oA-Y8-Ast"/>
+                        <constraint firstAttribute="trailing" secondItem="Enr-WF-fao" secondAttribute="trailing" id="MoJ-cd-Wj8"/>
+                        <constraint firstItem="Enr-WF-fao" firstAttribute="top" secondItem="KbH-yS-hOu" secondAttribute="top" id="gj4-Df-ui6"/>
+                        <constraint firstItem="Enr-WF-fao" firstAttribute="width" secondItem="KbH-yS-hOu" secondAttribute="width" priority="750" id="mBe-B8-1g2"/>
+                        <constraint firstAttribute="bottom" secondItem="z2o-YZ-c6B" secondAttribute="bottom" placeholder="YES" id="ryr-hS-4VH"/>
+                        <constraint firstItem="Enr-WF-fao" firstAttribute="centerY" secondItem="KbH-yS-hOu" secondAttribute="centerY" id="zbG-P7-4R0"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Hdw-jb-6uN"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="KbH-yS-hOu" firstAttribute="leading" secondItem="0lN-sK-gSg" secondAttribute="leading" id="3Ii-5e-fPP"/>
+                <constraint firstAttribute="trailing" secondItem="KbH-yS-hOu" secondAttribute="trailing" id="Ukd-BI-K57"/>
+                <constraint firstAttribute="top" secondItem="KbH-yS-hOu" secondAttribute="top" id="ltP-Xh-RHt"/>
+                <constraint firstItem="KbH-yS-hOu" firstAttribute="bottom" secondItem="0lN-sK-gSg" secondAttribute="bottom" id="sHC-cV-TNk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                    <size key="value" width="0.0" height="1"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                    <color key="value" name="greyishBrown1"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                    <real key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="136.64122137404578" y="-264.43661971830988"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="black22">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="greyishBrown1">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="strawberry">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

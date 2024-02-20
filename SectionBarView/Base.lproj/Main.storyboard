@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SectionBarView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gey-aN-Qh5" customClass="LTSectionBarView" customModule="SectionBarView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="DI7-jp-TWL"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LuO-OQ-2eg">
+                                <rect key="frame" x="0.0" y="115" width="393" height="703"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ocs-qn-maE">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="703"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ocs-qn-maE" firstAttribute="top" secondItem="LuO-OQ-2eg" secondAttribute="top" id="43S-pG-a5f"/>
+                                    <constraint firstItem="Ocs-qn-maE" firstAttribute="leading" secondItem="LuO-OQ-2eg" secondAttribute="leading" id="j2e-NT-Hk1"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ocs-qn-maE" secondAttribute="bottom" id="mhT-gk-hCf"/>
+                                    <constraint firstItem="Ocs-qn-maE" firstAttribute="centerX" secondItem="LuO-OQ-2eg" secondAttribute="centerX" id="uFK-ay-GM1"/>
+                                    <constraint firstItem="Ocs-qn-maE" firstAttribute="centerY" secondItem="LuO-OQ-2eg" secondAttribute="centerY" priority="250" id="vxV-Bs-P4H"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ocs-qn-maE" secondAttribute="trailing" id="yda-E7-1Kz"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LuO-OQ-2eg" firstAttribute="top" secondItem="Gey-aN-Qh5" secondAttribute="bottom" id="1LA-CT-pqc"/>
+                            <constraint firstItem="Gey-aN-Qh5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3dB-4H-nbQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LuO-OQ-2eg" secondAttribute="bottom" id="8vX-Dx-uh2"/>
+                            <constraint firstItem="LuO-OQ-2eg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QwC-3m-fDd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gey-aN-Qh5" secondAttribute="trailing" id="U9I-OT-PsL"/>
+                            <constraint firstItem="Gey-aN-Qh5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VF7-em-6nB"/>
+                            <constraint firstItem="LuO-OQ-2eg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XwC-qL-Fib"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LuO-OQ-2eg" secondAttribute="trailing" id="jC4-9C-Rzw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="LuO-OQ-2eg" id="tke-s1-qSk"/>
+                        <outlet property="sectionBarView" destination="Gey-aN-Qh5" id="3Bl-Gq-CUl"/>
+                        <outlet property="stackView" destination="Ocs-qn-maE" id="a0j-PW-H0Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
